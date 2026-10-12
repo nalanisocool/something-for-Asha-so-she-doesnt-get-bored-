@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For Asha 💗</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;padding:24px 16px;
+ display:flex;align-items:center;justify-content:center;
+ background:linear-gradient(145deg,#ffe1ed,#fff5f8,#f5d8ff);
+ font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+ color:#54233d;
+}
+.card{
+ width:100%;max-width:430px;background:#ffffffd9;
+ padding:30px 23px;border-radius:28px;text-align:center;
+ box-shadow:0 15px 45px #b85b8130;
+ border:1px solid white;
+}
+.heart{font-size:42px;animation:beat 1.4s infinite}
+@keyframes beat{50%{transform:scale(1.12)}}
+h1{font-size:32px;margin:12px 0}
+p{line-height:1.7}
+.tag{color:#b64e7a;font-size:12px;letter-spacing:3px}
+button{
+ border:0;border-radius:15px;padding:13px 17px;
+ background:#e879a5;color:white;font-size:15px;
+ font-weight:700;cursor:pointer;margin:5px;
+}
+button:active{transform:scale(.97)}
+input,textarea,select{
+ width:100%;padding:13px;margin:8px 0;
+ border:1px solid #f0c4d7;border-radius:12px;
+ background:#fffafd;font:inherit;color:#54233d;
+}
+textarea{min-height:90px;resize:vertical}
+.section{margin-top:26px;padding-top:18px;border-top:1px solid #f4d5e2}
+#reply{font-weight:600;color:#b64e7a;min-height:24px}
+footer{font-size:12px;color:#9c6680;margin-top:24px}
+</style>
+</head>
+<body>
+<main class="card">
+ <div class="heart">💗</div>
+ <div class="tag">A LITTLE SOMETHING FOR YOU</div>
+ <h1>Wssp Asha aaaa 🥹</h1>
+ <p>Don't get bored 😭💕 I made you this little corner of the internet. You better explore it properly, okay?</p>
+ <button onclick="document.getElementById('surprise').hidden=false;this.hidden=true">Open your surprise 🎁</button>
+ <div id="surprise" hidden>
+  <h2>Hehe, surpriseee 💐</h2>
+  <p>Just a little reminder that you're someone worth appreciating. I hope this makes you smile, even for a second. 🫶🏽</p>
+ </div>
+ <div class="section">
+  <h3>Your turn, Asha 💌</h3>
+  <p>I made this, but I want to hear from you too.</p>
+  <label for="mood">How's your mood today?</label>
+  <select id="mood">
+   <option>Choose your mood...</option>
+   <option>Happy 😚</option>
+   <option>Chilling 😌</option>
+   <option>Sleepy 😴</option>
+   <option>Overthinking 🥲</option>
+   <option>Need a hug 🫂</option>
+  </select>
+  <label for="rating">Rate my little creation 💗</label>
+  <select id="rating">
+   <option>Choose a rating...</option>
+   <option>10/10 you ate 😭</option>
+   <option>Pretty cute ngl 💕</option>
+   <option>You could do better 😂</option>
+  </select>
+  <label for="opinion">Anything you want to tell me?</label>
+  <textarea id="opinion" placeholder="Your honest thoughts go here..."></textarea>
+  <button onclick="sendAnswers()">Send your answers 💌</button>
+  <p id="reply"></p>
+ </div>
+ <footer>made with a little effort & a lot of vibes ♡</footer>
+</main>
+<script>
+function sendAnswers(){
+ const text="Asha's website answers 💗\nMood: "+
+ document.getElementById('mood').value+
+ "\nRating: "+document.getElementById('rating').value+
+ "\nThoughts: "+document.getElementById('opinion').value;
+ document.getElementById('reply').textContent=
+ "Aww, thank you for answering 🥹💗";
+ if(navigator.share){
+  navigator.share({title:"Asha's answers",text:text}).catch(()=>{});
+ }else if(navigator.clipboard){
+  navigator.clipboard.writeText(text).catch(()=>{});
+ }
+}
+</script>
+</body>
+</html>
