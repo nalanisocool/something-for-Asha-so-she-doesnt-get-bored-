@@ -1,97 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>For Asha 💗</title>
 <style>
 *{box-sizing:border-box}
 body{
- margin:0;min-height:100vh;padding:24px 16px;
- display:flex;align-items:center;justify-content:center;
- background:linear-gradient(145deg,#ffe1ed,#fff5f8,#f5d8ff);
- font-family:-apple-system,BlinkMacSystemFont,sans-serif;
- color:#54233d;
+margin:0;min-height:100vh;
+font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+background:linear-gradient(145deg,#fff0f5,#f9d3e4,#fceafa);
+color:#66334d;display:flex;justify-content:center;
+align-items:center;padding:22px;text-align:center;
 }
 .card{
- width:100%;max-width:430px;background:#ffffffd9;
- padding:30px 23px;border-radius:28px;text-align:center;
- box-shadow:0 15px 45px #b85b8130;
- border:1px solid white;
+width:100%;max-width:410px;background:#ffffffc9;
+padding:30px 22px;border-radius:28px;
+box-shadow:0 12px 40px #b76c9630;
+border:1px solid white;
 }
-.heart{font-size:42px;animation:beat 1.4s infinite}
-@keyframes beat{50%{transform:scale(1.12)}}
-h1{font-size:32px;margin:12px 0}
+.heart{font-size:45px}
+h1{font-size:29px;margin:12px 0}
 p{line-height:1.7}
-.tag{color:#b64e7a;font-size:12px;letter-spacing:3px}
 button{
- border:0;border-radius:15px;padding:13px 17px;
- background:#e879a5;color:white;font-size:15px;
- font-weight:700;cursor:pointer;margin:5px;
+border:0;border-radius:22px;padding:13px 19px;
+margin:6px;background:#e77eac;color:white;
+font-size:15px;font-weight:600;cursor:pointer;
 }
 button:active{transform:scale(.97)}
-input,textarea,select{
- width:100%;padding:13px;margin:8px 0;
- border:1px solid #f0c4d7;border-radius:12px;
- background:#fffafd;font:inherit;color:#54233d;
+.secondary{background:#fff;color:#a64f7a;border:1px solid #efbfd5}
+input,textarea{
+width:100%;padding:13px;border:1px solid #edc2d6;
+border-radius:14px;margin:8px 0;
+font:inherit;background:#fff9fc;color:#66334d;
 }
-textarea{min-height:90px;resize:vertical}
-.section{margin-top:26px;padding-top:18px;border-top:1px solid #f4d5e2}
-#reply{font-weight:600;color:#b64e7a;min-height:24px}
-footer{font-size:12px;color:#9c6680;margin-top:24px}
+textarea{min-height:85px;resize:vertical}
+.section{margin-top:24px;padding-top:18px;border-top:1px solid #f1ccdd}
+#response{font-weight:600;min-height:24px}
 </style>
 </head>
 <body>
 <main class="card">
- <div class="heart">💗</div>
- <div class="tag">A LITTLE SOMETHING FOR YOU</div>
- <h1>Wssp Asha aaaa 🥹</h1>
- <p>Don't get bored 😭💕 I made you this little corner of the internet. You better explore it properly, okay?</p>
- <button onclick="document.getElementById('surprise').hidden=false;this.hidden=true">Open your surprise 🎁</button>
- <div id="surprise" hidden>
-  <h2>Hehe, surpriseee 💐</h2>
-  <p>Just a little reminder that you're someone worth appreciating. I hope this makes you smile, even for a second. 🫶🏽</p>
- </div>
- <div class="section">
-  <h3>Your turn, Asha 💌</h3>
-  <p>I made this, but I want to hear from you too.</p>
-  <label for="mood">How's your mood today?</label>
-  <select id="mood">
-   <option>Choose your mood...</option>
-   <option>Happy 😚</option>
-   <option>Chilling 😌</option>
-   <option>Sleepy 😴</option>
-   <option>Overthinking 🥲</option>
-   <option>Need a hug 🫂</option>
-  </select>
-  <label for="rating">Rate my little creation 💗</label>
-  <select id="rating">
-   <option>Choose a rating...</option>
-   <option>10/10 you ate 😭</option>
-   <option>Pretty cute ngl 💕</option>
-   <option>You could do better 😂</option>
-  </select>
-  <label for="opinion">Anything you want to tell me?</label>
-  <textarea id="opinion" placeholder="Your honest thoughts go here..."></textarea>
-  <button onclick="sendAnswers()">Send your answers 💌</button>
-  <p id="reply"></p>
- </div>
- <footer>made with a little effort & a lot of vibes ♡</footer>
+<div class="heart">💗</div>
+<h1>WSSP ASHAAAA</h1>
+<p>Don't get bored 😭💕 I made you this little website.</p>
+<p>Since we're already here, you might as well explore a little hehe.</p>
+<div class="section">
+<h3>🌷 A little question</h3>
+<p>What's your current mood?</p>
+<button onclick="mood('Happy 🥹')">Happy</button>
+<button onclick="mood('Chill 😌')">Chill</button>
+<button onclick="mood('Bored 😭')">Bored</button>
+<button onclick="mood('Confused 😂')">Confused</button>
+<p id="response"></p>
+</div>
+<div class="section">
+<h3>💌 Your opinions matter</h3>
+<p>What do you think of this little surprise?</p>
+<button onclick="opinion('Cute 🥹💗')">It's cute</button>
+<button onclick="opinion('Funny 😭')">It's funny</button>
+<button onclick="opinion('You tried 😂')">You tried 😂</button>
+<p id="opinion"></p>
+</div>
+<div class="section">
+<h3>🦋 Your little corner</h3>
+<p>If you could do anything right now, what would it be?</p>
+<textarea id="dream" placeholder="Tell me anything..."></textarea>
+<p>And what song are you listening to lately?</p>
+<input id="song" placeholder="Your current favourite song 🎧">
+<button onclick="saveAnswers()">Save my answers 💗</button>
+<p id="saved"></p>
+</div>
+<div class="section">
+<p>That's all for now, Asha 🥹</p>
+<p>Hope this made you smile, even a little. 🌸</p>
+<button class="secondary" onclick="alert('Sending you a virtual huggg 🫂💗')">A virtual hug 🫂</button>
+</div>
 </main>
 <script>
-function sendAnswers(){
- const text="Asha's website answers 💗\nMood: "+
- document.getElementById('mood').value+
- "\nRating: "+document.getElementById('rating').value+
- "\nThoughts: "+document.getElementById('opinion').value;
- document.getElementById('reply').textContent=
- "Aww, thank you for answering 🥹💗";
- if(navigator.share){
-  navigator.share({title:"Asha's answers",text:text}).catch(()=>{});
- }else if(navigator.clipboard){
-  navigator.clipboard.writeText(text).catch(()=>{});
- }
+function mood(value){
+document.getElementById('response').textContent='Mood noted: '+value+' 💗';
+}
+function opinion(value){
+document.getElementById('opinion').textContent='AHAHA okayyy 😭 '+value;
+}
+function saveAnswers(){
+const dream=document.getElementById('dream').value.trim();
+const song=document.getElementById('song').value.trim();
+if(!dream&&!song){
+document.getElementById('saved').textContent='Write something first, Asha 😭💕';
+return;
+}
+document.getElementById('saved').textContent='Your answers are here on this screen 💗';
 }
 </script>
 </body>
